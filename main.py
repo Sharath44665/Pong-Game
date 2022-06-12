@@ -7,6 +7,7 @@ my_screen=Screen()
 my_screen.setup(width=800,height=600)
 my_screen.bgcolor("black")
 my_screen.title(titlestring="Pong Game")
+my_screen.tracer(0) #tracer is off meaning animation off
 
 right_slider=Slider()
 my_screen.listen()
