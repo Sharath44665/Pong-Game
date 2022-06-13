@@ -23,3 +23,7 @@ class Ball(Turtle):
 
     def detect_slider_collision(self):
         self.x_move*=-1
+
+    def reset_position(self):
+        self.home()
+        self.x_move *= -1
