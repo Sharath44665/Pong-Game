@@ -19,13 +19,14 @@ my_screen.onkey(fun=right_slider.move_up, key="Up")
 my_screen.onkey(fun=right_slider.move_down, key="Down")
 my_screen.onkey(fun=left_slider.move_up, key="w")
 my_screen.onkey(fun=left_slider.move_down, key="s")
-ball.move()
+
 game_status=True
 while game_status:
     my_screen.update()
     time.sleep(0.1)
 
-    # game_status=False
-
+    ball.move()
+    if ball.ycor() >=298 or ball.ycor()<=-298:
+        ball.detect_collision()
 
 my_screen.exitonclick()
