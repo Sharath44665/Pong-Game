@@ -28,5 +28,6 @@ while game_status:
     ball.move()
     if ball.ycor() >=298 or ball.ycor()<=-298:
         ball.detect_collision()
-
+    if ball.xcor() > 335 and ball.distance(right_slider)<50 or ball.ycor() <-335 and ball.distance(left_slider)<50:
+        ball.detect_slider_collision()
 my_screen.exitonclick()
